@@ -1,0 +1,20 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+
+    </script>
+
+    <div id="divDelete">
+        <h2>Deseas eliminar esta publicación del Draft?</h2>
+        <div>
+            <form id="frmOffer" name="formularioDelete" method="post" action="/driver_offers/delete?id={{id}}&idOffer={{idOffer}}">
+                <input type="text" name="fecha" id="edFecha" value="{{offer.fecha}}" readonly/><br>
+                <input type="text" name="email" id="edEmail" value="{{offer.email}}" readonly/><br>
+                <input type="text" name="experiencia" id="edExperiencia" value="{{offer.experiencia}}" readonly/><br>
+                <input type="text" name="especialidad" id="edEspecialidad" value="{{offer.especialidad}}" readonly/><br>
+                <input type="text" name="objetivo" id="edObjetivo" value="{{offer.objetivo}}" readonly/><br>
+                <input type="submit" id="btDelete" value="Borrar Oferta"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}

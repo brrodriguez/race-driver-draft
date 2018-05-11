@@ -1,0 +1,36 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+
+    </script>
+
+    <div id="divEdit">
+        <h2>Modifica tu oferta del Draft!</h2>
+        <div>
+            <form id="frmOffer" name="formularioEdit" method="post" action="/driver_offers/edit?idUser={{idUser}}&idOffer={{idOffer}}">
+                <input type="text" name="experiencia" id="edExperiencia" value="{{offer.experiencia}}" />
+                <label>
+                    <select name="especialidad">
+                        <option selected value="{{offer.especialidad}}"> {{offer.especialidad}} </option>
+                        <option value="Road">Road</option>
+                        <option value="Oval">Oval</option>
+                        <option value="Rally">Rally</option>
+                        <option value="RallyCross">RallyCross</option>
+                    </select>
+                </label>
+                <label>
+                    <select name="objetivo">
+                        <option selected value="{{offer.objetivo}}"> {{offer.objetivo}} </option>
+                        <option value="Formula1">Formula1</option>
+                        <option value="IndyCar">IndyCar</option>
+                        <option value="Nascar">Nascar</option>
+                        <option value="WEC">WEC</option>
+                        <option value="WRC">WRC</option>
+                        <option value="World Rallycross">World Rallycross</option>
+                    </select>
+                </label>
+                <input type="submit" id="btEdit" value="Modificar Oferta"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}

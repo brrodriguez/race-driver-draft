@@ -1,0 +1,67 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+
+        function hideError(){
+	    document.getElementById("dvError").style.display = "none";
+	    }
+
+	    function showError(msg)
+        {
+            dvError = document.getElementById("dvError");
+            pError = document.createElement("p");
+
+            dvError.innerHTML = "";
+			dvError.appendChild( pError );
+			pError.appendChild( document.createTextNode( msg ) );
+			dvError.style.display = "block";
+	    }
+
+        function chk()
+        {
+            toret = true;
+
+            experiencia = document.getElementById("edExperiencia");
+            especialidad = document.getElementById("edEspecialidad");
+            objetivo = document.getElementById("edObjetivo");
+            dvError = document.getElementById("dvError");
+
+			hideError();
+
+            if(experiencia.value.trim().length === 0){
+                showError("Experiencia no puede estar vacío");
+                toret = false;
+			}
+
+			return toret;
+        }
+    </script>
+
+    <div id="divAdd">
+        <h2>Crea tu nueva oferta para publicarla en el Draft!</h2>
+            <form id="frmOffer" name="formularioAdd" method="post" action="/driver_offers/add?id={{id}}">
+                <input type="text" name="experiencia" id="edExperiencia" placeholder="Experiencia"/>
+                <label>
+                    <select name="especialidad">
+                        <option selected value="Ninguna"> Especialidad </option>
+                        <option value="Road">Road</option>
+                        <option value="Oval">Oval</option>
+                        <option value="Rally">Rally</option>
+                        <option value="RallyCross">RallyCross</option>
+                    </select>
+                </label>
+                <label>
+                    <select name="objetivo">
+                        <option selected value="Ninguno"> Campeonato objetivo </option>
+                        <option value="Formula1">Formula1</option>
+                        <option value="IndyCar">IndyCar</option>
+                        <option value="Nascar">Nascar</option>
+                        <option value="WEC">WEC</option>
+                        <option value="WRC">WRC</option>
+                        <option value="World Rallycross">World Rallycross</option>
+                    </select>
+                </label>
+                <input type="submit" id="btAdd" value="Publicar Oferta"/>
+            </form>
+    </div>
+{% endblock %}

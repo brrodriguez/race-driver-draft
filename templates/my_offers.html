@@ -1,0 +1,41 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+    </script>
+<div id="divMyOffers">
+        <div>
+            <h2>Tus Ofertas Publicadas:</h2>
+        </div>
+        <div>
+            <main>
+                <p>
+                    {%if offers and offers.count() > 0 %}
+                    <table>
+                        {% for offer in offers %}
+                        <div id="divMyOffer">
+                            <div id="divO1">
+                                <div style="font-weight: bold">{{ offer.fecha }}</div>
+                                <div style="font-weight: bold">{{ offer.username }}</div>
+                                <div>{{ offer.email }}</div>
+                            </div>
+                            <div id="divO2">
+                                <div>{{ offer.experiencia }}</div>
+                                <div>{{ offer.especialidad }}</div>
+                                <div>{{ offer.objetivo }}</div>
+                            </div>
+                        </div>
+                        <div>
+                            <a style="margin-left: 20px; background-color: #B29A3E; border-radius: 5px" href="/driver_offers/delete?id={{id}}&idOffer={{offer.key.urlsafe()}}">Borrar Oferta</a>
+                            <a style="margin-left: 60px; background-color: #B29A3E; border-radius: 5px" href="/driver_offers/edit?id={{id}}&idOffer={{offer.key.urlsafe()}}">Modificar Oferta</a>
+                        </div>
+
+                        {% endfor %}
+            </table>
+                {% else %}
+                Por ahora no publicaste ofertas.
+                {% endif %}
+            </main>
+        </div>
+    <div id="dvError"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+     <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="/css/style.css"/><title>RaceDriverDraft</title>
+	<script>
+	</script>
+</head>
+<body>
+	<div id="skeleton">
+		<nav class="navbar navbar-default navigation-clean-search">
+			<div class="navbar-header">
+				<br>
+				<a style="margin-top: 10px; font-size: 50px; font-weight: bold" class="navbar-brand" href="/draft?id={{id}}">RaceDriverDraft</a>
+				<img style="margin-left: 300px; margin-bottom: 10px" src="/res/logo.png" width="80" height="80">
+			</div>
+			<div class="exercise-tables-background right-block">
+        		<h4  style="margin-top: 30px; font-weight: bold; margin-left: 1200px; font-size: 20px"><a href="/users/profile?id={{id}}">{{user.username}}</a></h4>
+				<div style=" margin-top: 30px; margin-left: 1000px">
+					<a style="color: #5058B2; font-weight: bold; font-size: 18px" href="/search?id={{id}}">Buscar</a>
+					<a style="color: #5058B2; font-weight: bold; margin-left: 150px; font-size: 18px" href="/">Cerrar sesión</a>
+				</div>
+    		</div>
+		</nav>
+	</div>
+
+    <main>
+        <div id="dvContents">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </main>
+
+</body>
+</html>

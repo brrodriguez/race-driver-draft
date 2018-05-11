@@ -1,0 +1,19 @@
+{% extends "skeleton_login.html" %}
+{% block content %}
+<script language="javascript" type="text/javascript">
+
+</script>
+
+
+    <div id="divLogin">
+        <h3>Iniciar sesión</h3>
+        <form id="frmLogin" name="formularioLogin" method="post" action="/">
+            <input style="margin-left: 10px" type="text" name="usernameLogin" id="edUsernameL" placeholder="Username"/><br>
+            <input style="margin-left: 10px" type="password" name="passwordLogin" id="edPasswordL" placeholder="Password"/><br>
+            <input style="margin-left: 10px" type="submit" id="btLogin" value="Iniciar Sesión"/><br><br>
+            <div>
+                <a style="color: black; font-size: 18px;" class="forgot" href="/register">Registrate aquí!</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

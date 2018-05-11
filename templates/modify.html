@@ -1,0 +1,27 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+
+    </script>
+
+    <div id="divModify">
+        <h2>Modifica tu Perfil!</h2>
+        <div>
+            <form id="frmOffer" name="formularioModify" method="post" action="/users/modify?idUser={{idUser}}">
+                <input type="text" name="nombre" id="edNombre" value="{{user.nombre}}" /><br>
+                <input type="text" name="nacionalidad" id="edNacionalidad" value="{{user.nacionalidad}}" /><br>
+                <input type="text" name="email" id="edEmail" value="{{user.email}}" /><br>
+                <label>
+                    <select name="sexo">
+                        <option selected value="{{user.sexo}}"> {{user.sexo}} </option>
+                        <option value="Mujer"> Mujer </option>
+                        <option value="Hombre"> Hombre </option>
+                    </select>
+                </label>
+                <br>
+                <input type="submit" id="btModify" value="Modificar Perfil"/>
+            </form>
+            <br>
+        </div>
+    </div>
+{% endblock %}

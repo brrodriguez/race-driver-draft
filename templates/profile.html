@@ -1,0 +1,29 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+    </script>
+<div id="divProfile">
+        <div>
+            <h2>Perfil:</h2>
+        </div>
+        <div>
+            <main>
+                <p>
+                    <table>
+                        <col>
+                            <tr>{{ user.nombre }}</tr><br>
+                            <tr>{{ user.username }}</tr><br>
+                            <tr>{{ user.nacionalidad }}</tr><br>
+                            <tr>{{ user.fecha_nac }}</tr><br>
+                            <tr>{{ user.sexo }}</tr><br>
+                            <tr>{{ user.email }}</tr><br><br>
+                            <div>
+                                <a href="/users/modify?id={{id}}">Modificar Perfil</a><br>
+                            </div>
+                            <br>
+                    </table>
+            </main>
+        </div>
+    <div id="dvError"></div>
+</div>
+{% endblock %}

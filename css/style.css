@@ -1,0 +1,284 @@
+
+body {
+	font-family:'Open Sans', Arial, sans-serif;
+	font-size:14px;
+	font-weight:300;
+	line-height:1.6em;
+	color:#000;
+	background-color:#FFE78C;
+}
+
+div#skeleton {
+    color: black;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#dvContents {
+    color: black;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divRegister {
+    background-color: #8C95FF;
+    color: black;
+    margin-top: 50px;
+    margin-left: 475px;
+    margin-right: 475px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divLogin {
+    background-color: #8C95FF;
+    color: black;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divDraft {
+    color: black;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divOffersDraft {
+    float: left;
+    width: 500px;
+    background-color: #8C95FF;
+    color: black;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divOffer {
+    float: left;
+    width: 450px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divO1 {
+    float: left;
+    color: black;
+    font-size: 16px;
+    margin-left: 5px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divO2 {
+    float: left;
+    color: black;
+    font-size: 16px;
+    margin-left: 60px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divMyOffers {
+    float: left;
+    width: 400px;
+    background-color: #8C95FF;
+    color: black;
+    margin-left: 500px;
+    margin-right: 200px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divMyOffer {
+    float: left;
+    width: 380px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divAdd {
+    float: left;
+    width: 700px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 16px;
+    margin-left: 350px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divSearch {
+    float: left;
+    width: 600px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 16px;
+    margin-left: 400px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divShow {
+    width: 400px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 18px;
+    margin-left: 500px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divEdit {
+    float: left;
+    width: 700px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 16px;
+    margin-left: 350px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divModify {
+    float: left;
+    width: 300px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 16px;
+    margin-left: 500px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divProfile {
+    width: 400px;
+    background-color: #A6ADFF;
+    color: black;
+    font-size: 18px;
+    margin-left: 500px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+div#divMenu {
+    float: left;
+    background-color: #B29A3E;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;;
+    border-radius: 5px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#000;
+	line-height:1.1em;
+}
+
+p {
+	color:#000;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.navbar-default {
+	margin-top:-10px;
+	background-color: #fff;
+	border-radius:0;
+	border:0;
+}
+
+.container-fluid > .navbar-header {
+	margin-right: 30px;
+	margin-left: 10px;
+	margin-top:20px;
+	border-radius:0;
+}
+.navbar-brand {
+  float: left;
+  height: 30px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-brand h1 {
+	float: left;
+	line-height:20px;
+	padding: 20px;
+	font-size: 30px;
+	margin-top:-15px;
+	color:#6D9C91;
+}
+.navbar-brand h1:hover {
+  background-color:#fff;
+}
+
+.menu {
+	font-size:14px;
+	float:right;
+	text-transform:uppercase;
+	font-weight:500;
+
+}
+
+.menu ul.nav-tabs li {
+	color:#000;
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+.nav-tabs > li {
+  float: left;
+  margin-bottom: 0;
+}
+.nav-tabs > li > a {
+	margin-bottom:20px;
+	margin-right: 20px;
+	line-height: 1.42857143;
+	border-bottom: 3px solid transparent;
+	border-radius:0;
+	color:#000;
+	border-top:0;
+	border-right:0;
+	border-left:0;
+}
+
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #6D9C91;
+  color: #6D9C91;
+  border-radius:0;
+  background-color:#f9f9f9;
+
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+    background-color: #6D9C91;
+  border: 0;
+  border-bottom-color: transparent;
+  cursor:pointer;
+}

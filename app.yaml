@@ -1,0 +1,60 @@
+application: race-driver-draft
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /templates
+  static_dir: templates
+  application_readable: true
+
+- url: /res
+  static_dir: res
+
+- url: /css
+  static_dir: css
+  application_readable: true
+
+- url: /show
+  script: handlers.search.app
+
+- url: /search
+  script: handlers.search.app
+
+- url: /driver_offers/edit
+  script: handlers.driver_offers.edit.app
+
+- url: /driver_offers/delete
+  script: handlers.driver_offers.delete.app
+
+- url: /users/modify
+  script: handlers.users.modify.app
+
+- url: /users/profile
+  script: handlers.users.profile.app
+
+- url: /driver_offers/my_offers
+  script: handlers.driver_offers.my_offers.app
+
+- url: /driver_offers/add
+  script: handlers.driver_offers.add.app
+
+- url: /draft
+  script: handlers.draft.app
+
+- url: /register
+  script: handlers.register.app
+
+- url: /
+  script: handlers.login.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: "latest"

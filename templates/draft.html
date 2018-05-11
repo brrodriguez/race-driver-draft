@@ -1,0 +1,45 @@
+{% extends "skeleton.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+    </script>
+<div id="divDraft">
+    <div id="divMenu">
+        <a href="/driver_offers/add?id={{id}}">Nueva Oferta</a><br>
+        <a href="/driver_offers/my_offers?id={{id}}">Mis Ofertas</a>
+    </div>
+    <div id="divOffersDraft">
+        <div>
+            <h1 style="margin-left:180px; font-size: 50px; font-weight: bold; font-family: Helvetica">Draft</h1>
+        </div>
+        <div>
+            <h3>Ofertas de pilotos:</h3>
+        </div>
+        <div>
+            <main>
+                <p>
+                    {%if draft and draft.count() > 0 %}
+                    <table>
+                        {% for offer in draft %}
+                        <div id="divOffer">
+                            <div id="divO1">
+                                <div style="font-weight: bold">{{ offer.fecha }}</div>
+                                <div style="font-weight: bold">{{ offer.username }}</div>
+                                <div>{{ offer.email }}</div>
+                            </div>
+                            <div id="divO2">
+                                <div>{{ offer.experiencia }}</div>
+                                <div>{{ offer.especialidad }}</div>
+                                <div>{{ offer.objetivo }}</div><br>
+                            </div>
+                        </div>
+                {% endfor %}
+            </table>
+                {% else %}
+                Por ahora no hay ofertas
+                {% endif %}
+            </main>
+        </div>
+    </div>
+    <div id="dvError"></div>
+</div>
+{% endblock %}

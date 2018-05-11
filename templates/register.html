@@ -1,0 +1,95 @@
+{% extends "skeleton_login.html" %}
+{% block content %}
+    <script language="javascript" type="text/javascript">
+
+        function hideError(){
+	    document.getElementById("dvError").style.display = "none";
+	    }
+
+	    function showError(msg)
+        {
+            dvError = document.getElementById("dvError");
+            pError = document.createElement("p");
+
+            dvError.innerHTML = "";
+			dvError.appendChild( pError );
+			pError.appendChild( document.createTextNode( msg ) );
+			dvError.style.display = "block";
+	    }
+
+        function chk() {
+            toret = true;
+
+            username = document.getElementById("edUsernameR");
+            email = document.getElementById("edEmail");
+            password = document.getElementById("edPasswordR");
+            nombre = document.getElementById("edNombre");
+            nacionalidad = document.getElementById("edNacionalidad");
+            fecha_nac = document.getElementById("edFechaNac");
+            sexo = document.getElementById("edSexo");
+            dvError = document.getElementById("dvError");
+
+            hideError();
+
+            if (username.value.trim().length === 0) {
+                showError("Username no puede estar vacío");
+                toret = false;
+            } else if (username.value.trim().length < 5) {
+                showError("Username debe tener 5 caracteres mínimo");
+                toret = false;
+            } else if (email.value.trim().length === 0) {
+                showError("Email no puede estar vacío");
+                toret = false;
+            } else if (password.value.trim().length === 0) {
+                showError("Password no puede estar vacío");
+                toret = false;
+            } else if (password.value.trim().length < 5) {
+                showError("Password debe tener 5 caracteres mínimo");
+                toret = false;
+            } else if (nombre.value.trim().length === 0) {
+                showError("Nombre no puede estar vacío");
+                toret = false;
+            } else if (nombre.value.trim().length < 10) {
+                showError("Nombre debe tener 10 caracteres mínimo");
+                toret = false;
+            } else if (fecha_nac.value.trim().length === 0) {
+                showError("Fecha nacimiento no puede estar vacío");
+                toret = false;
+            } else if (sexo.value.trim().length === 0) {
+                showError("Sexo no puede estar vacío");
+                toret = false;
+            } else if (nacionalidad.value.trim().length === 0) {
+                showError("Nacionalidad no puede estar vacío");
+                toret = false;
+
+                return toret;
+            }
+        }
+    </script>
+
+    <div id="divRegister">
+        <h2>Regístrate para acceder al Draft!</h2>
+        <form onsubmit="return chk();" action="/register" method="POST">
+            <div class="form-group" id="dvError" style="color:darkblue;background-color:red;display:none">
+
+            </div>
+            <input style="margin-left: 20px" type="text" name="username" id="edUsernameR" placeholder="Username"/>
+            <input style="margin-left: 20px" type="text" name="nacionalidad" id="edNacionalidad" placeholder="Nacionalidad"/>
+            <br><br>
+            <input style="margin-left: 20px" type="password" name="password" id="edPasswordR" placeholder="Password" />
+            <input style="margin-left: 20px" type="email" name="email" id="edEmail" placeholder="E-mail"/>
+            <br><br>
+            <input style="margin-left: 20px" type="text" name="nombre" id="edNombre" placeholder="Nombre completo"/>
+            <input style="margin-left: 20px" type="text" name="fecha_nac" id="edFechaNac" placeholder="Fecha Nacimiento"/>
+            <br><br>
+            <label style="margin-left: 20px">
+                    <select name="sexo">
+                        <option selected value="Sin especificar"> Sin especificar </option>
+                        <option value="Mujer"> Mujer </option>
+                        <option value="Hombre"> Hombre </option>
+                    </select>
+            </label>
+            <input style="margin-left: 60px" type="submit" id="btRegister" value="Registrar"/>
+        </form>
+    </div>
+{% endblock %}
